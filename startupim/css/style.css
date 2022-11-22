@@ -1,0 +1,672 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  system-ui;
+    color: #00003a;
+}
+
+.navbar {
+    display: flex;
+    padding: 0 7% 0 10%;
+    width: 100%;
+    top: 0;
+    height: 10vh;
+    position: fixed;
+    z-index: 111;
+    background: #fff;
+}
+
+.navbar__logo {
+    display: flex;
+    align-items: center;
+}
+.logo h1 {
+    font-size: 50px;
+    color: dodgerblue;
+    transform: rotate(-35deg);
+    transition: 1s;
+    animation: infinite 2s animate;
+}
+
+.logo h1:hover {
+    transform: rotate(1deg);
+}
+
+.navbar__collection {
+    display: flex;
+    margin-left: 25%;
+    list-style: none;
+    align-items: center;
+    flex: 1;
+}
+
+.navbar__item {
+    margin: 50px 5px;
+    padding: 1px 12px 5px 12px;
+    border-radius: 0 12px 0 12px;
+    font-size: 20px;
+    font-weight: 100;
+    transition: .5s;
+    font-weight: 500;
+}
+
+.navbar__item:hover {
+    background: #99baed;
+    color: #fff;
+    cursor: pointer;
+}
+
+.navbar_user {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 80px;
+}
+
+.navbar_user .fas {
+    border-radius: 50%;
+    font-size: 24px;
+    margin-right: 30px;
+    color: #99baed;
+    padding: 10px;
+    transition: .5s;
+}
+
+.navbar_user .fas:hover {
+    color: #fff;
+    background: #99baed;
+}
+
+.btn {
+    padding: 10px 35px;
+    border-radius: 12px;
+    background: #99baed;
+    color: white;
+    font-size: 18px;
+    border: none;
+    box-shadow: 3px 3px 10px #99baed;
+    transition: .5s;
+}
+
+.btn:hover {
+    background: dodgerblue;
+    box-shadow: 3px 3px 10px dodgerblue;
+}
+
+.banner {
+    position: relative;
+    top: 10vh;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    padding-left: 10%;
+    background: rgb(247,247,247);
+}
+
+.banner__text {
+    width: 40%;
+    height: 100%;
+}
+
+.banner__image {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 15vh;
+    left: 5vw;
+    z-index: 3;
+}
+
+.banner__image img {
+    margin-top: 30px;
+    width: 100%;
+}
+
+.banner__title {
+    padding-top: 50px;
+    font-weight: 400;
+    font-size: 55px;
+}
+
+.banner__title span {
+    color: gold;
+    font-weight: 500;
+}
+
+.banner__desc {
+    margin: 40px 0;
+    width: 60%;
+    font-weight: 100;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 12px;
+    background: #99baed;
+}
+
+::-webkit-scrollbar-button {
+    background: #99baed;
+    color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 12px;
+    background: #fff;
+    width: 4px;
+}
+
+.banner__2 {
+    margin: 10vh 0;
+    width: 100%;
+    display: grid;
+}
+
+.banner__target {
+    z-index: 5;
+    display: flex;
+    position: relative;
+    bottom: 5vh;
+    width: 100%;
+    height: 100vh;
+    margin-bottom: 100px;
+    padding: 10px 10%;
+}
+
+.banner__targetImage img {
+    width: 140%;
+    justify-content: left;
+    position: relative;
+    top: -5vh;
+    left: -10vw;
+}
+
+.banner__targetText {
+    width: 60%;
+    padding: 20px 5% 20px 5%;
+}
+
+.banner__historyTitle {
+    margin-bottom: 60px;
+}
+
+.banner__targetDesc {
+    width: 100%;
+    font-size: 20px;
+}
+
+.btn__2 {
+    margin-top: 50px;
+}
+
+.banner__course {
+    width: 100%;
+    margin: 10vh 0;
+}
+
+.banner__courseTitle {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    margin-top: -20px;
+    margin-bottom: 40px;
+}
+
+.banner__courseItems {
+    width: 100%;
+    list-style: none;
+    display: block;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.course__type {
+    font-size: 32px;
+    color: #00003a;
+    margin: 20px;
+    height: 30px;
+    background: yellow;
+}
+
+.course__type h3 {
+    transform: translateY(-30px);
+}
+
+.course__item {
+    width: 300px;
+    max-width: 32%;
+    height: 420px;
+    border-radius: 20px;
+    text-align: center;
+    padding: 20px 10px;
+    margin-right: 30px;
+    border-top: 1px solid #99baed;
+    border-left: 1px solid #99baed;
+    border-right: 1px solid #99baed;
+    border-bottom: 5px solid #99baed;
+    transition: .8s;
+    background: #fffff1;
+}
+
+.item__content {
+    overflow: hidden;
+    height: 220px;
+    transition: .5s;
+}
+
+.way__toCourse {
+    width: 100%;
+    height: 50px;
+    background: dodgerblue;
+    transform: translateY(15px);
+    transition: .5s;
+}
+
+.way__toCourse a button {
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+}
+
+.item__content:hover .item__desc {
+    transform: translateY(-110px);
+}
+
+.item__content:hover .price {
+    transform: translateY(-50px);
+}
+
+.item__content:hover .way__toCourse {
+    transform: translateY(-36px);
+}
+
+.courses__line {
+    margin-top: 80px;
+}
+
+.item__desc {
+    color: #799ed6;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 50px;
+    transition: .1s;
+}
+
+.item__desc span {
+    color: #99baed;
+    font-weight: 500;
+}
+
+.course__item:hover {
+    color: #fff;
+    background: #99baed;
+    box-shadow: 0 0 10px #99baed;
+}
+
+.course__item .img {
+    background: #e8f1ff;
+    font-size: 20px;
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: 170px;
+    padding: 80px 14px;
+    border-radius: 10px;
+    border-bottom: 3px solid #99baed;
+    text-align: center;
+}
+
+.item__title {
+    font-size: 38px;
+    font-weight: 700;
+    margin: 10px 0 20px 0;
+    color: gold;
+}
+
+.price {
+    padding-top: 10px;
+    border-top: 1px solid #99baed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: .5s
+}
+
+.price i {
+    font-size: 20px;
+    color: yellow;
+}
+
+.price span {
+    font-size: 22px;
+    color: #fff;
+    background: yellow;
+    padding: 3px 8px 4px 8px;
+    margin-left: 10px;
+}
+
+.banner__3 {
+    margin: 10% 0;
+    width: 100%;
+    display: grid;
+}
+
+.footer {
+    position: relative;
+    width: 100%;
+    background: #0b2d5f;
+    height: 60vh;
+    display: grid;
+    margin: 0 0 -10% 0;
+}
+
+.footer .footer__logo {
+    display: flex;
+    align-items: center;
+}
+
+.footer .footer__logo h1 {
+    font-size: 36px;
+}
+
+.footer .footer__logo h3 {
+    margin-left: 10px;
+    font-size: 22px;
+    color: dodgerblue;
+}
+
+.footer__text {
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    width: 90%;
+}
+
+.footer__ustun {
+    list-style: none;
+}
+
+.footer__itemTitle {
+    list-style: none;
+    color: #fff;
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.footer__ustun a {
+text-decoration: none;
+    color: #ffffff28;
+    font-size: 20px;
+}
+
+.footer__icons {
+    width: 100%;
+    display: block;
+    margin: 30px auto 15px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer__iconsItem{
+    list-style: none;
+    width: 140px;
+    margin: 10px 15px;
+    font-size: 20px;
+    border-radius: 5px;
+    background: #fff;
+    font-weight: 500;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+
+.footer__iconsItem a i {
+    padding-right: 10px;
+}
+
+.footer__iconsItem a {
+    text-decoration: none;
+    color: #0b2d5f;
+}
+
+.copyright {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px 0 10px;
+    height: 40px;
+    position: relative;
+    bottom: -40px;
+}
+
+.copyright .name {
+    font-weight: 400;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.copyright .name i {
+    padding-right: 10px;
+}
+
+#signup h2 {
+    position: relative;
+    top: 10px;
+}
+
+#signup p a {
+    color: dodgerblue;
+    text-decoration: none;
+}
+
+#signup p {
+    position: relative;
+}
+
+.signup_page {
+    position: fixed;
+    top: 10vh;
+    width: 300px;
+    height: 90vh;
+    overflow: hidden;
+    display: grid;
+    text-align: center;
+    background: #fff;
+    justify-content: center;
+    right: .1px;
+    transition: .8s;
+    overflow-y: hidden;
+    z-index: 27;
+    opacity: 0;
+}
+
+#signup form {
+    position: relative;
+    top: -40px;
+}
+
+#signup input {
+    width: 70%;
+    height: 40px;
+    padding: 7px;
+    border: grey 1px solid;
+    outline: none;
+    margin-top: 30px;
+    margin-bottom: -20px;
+    font-size: 12px;
+}
+
+#signup input:first-child {
+    margin-top: 60px;
+}
+
+#signup .submit {
+    border: none;
+    background: blue;
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+#signup .quit__icon {
+    position: relative;
+    border-radius: 50%;
+    background: dodgerblue;
+    padding: 10px;
+    font-size: 14px;
+    display: inline;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    right: -85%;
+    top: 2%;
+}
+
+.signup {
+    position: absolute;
+    background: transparent;
+    width: 100%;
+    height: 100vh;
+}
+
+.signup.active {
+    background: #000000bd;
+    z-index: 25;
+    position: fixed;
+    overflow: hidden;
+    display: none;
+}
+
+.signup_page.active {
+    opacity: 1;
+}
+
+.contact__section {
+    padding: 0 40px 6% 40px;
+    width: 100%;
+    display: grid;
+    border: 1px solid red;
+}
+
+.contact {
+    display: flex;
+}
+
+.contact__info {
+    width: 50%;
+    list-style: none;
+    display: grid;
+}
+
+.info__item {
+    align-items: center;
+    width: 100%;
+    height: 55px;
+    background: dodgerblue;
+    border-radius: 12px;
+    display: flex;
+}
+
+.a-tag {
+    display: flex;
+}
+
+.info__item a {
+    color: #fff;
+    text-decoration: none;
+    flex-direction: column;
+    display: flex;
+}
+
+.info__item .items__text h2,
+.info__item .items__text p {
+    color: dodgerblue;
+    display: inline;
+}
+
+.items__text {
+    display: flex;
+}
+
+.infocha {
+    display: flex;
+}
+
+.info__item .items__text {
+    background: #fff;
+    width: 120%;
+    height: 47px;
+    margin-left: 10px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.item__icons {
+    background: #fff;
+    width: 47px;
+    height: 47px;
+    margin-left: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: dodgerblue;
+}
+
+.item__icons i {
+    font-size: 18px;
+    color: dodgerblue;
+}
+
+.form__input {
+    display: grid;
+    width: 50%;
+}
+
+.form__input input {
+    width: 60%;
+    margin: 10px;
+    height: 55px;
+    padding: 10px;
+    outline: none;
+    border:2px solid #fafafa;
+    background: #fdfdfd;   
+}
+
+.form__input button {
+    width: 60%;
+    height: 55px;
+    margin: 10px;  
+    background: dodgerblue;
+    color: #fff;
+    font-size: 24px;
+    border: none;
+    font-weight: 600;
+}
+
+.form__input .contact__textarea {
+    height: 120px;
+    padding: 10px;
+    width: 60%;
+    margin: 10px;
+    border:2px solid #fafafa;
+    outline: none;
+    background: #fdfdfd;
+}
